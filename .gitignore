@@ -1,0 +1,52 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+
+cache_embeddings/
+__pycache__/
+.venv/
+
+# Build/distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type checkers/lint
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit/local settings
+.streamlit/secrets.toml
+
+# Project runtime artifacts
+cache_embeddings/
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
