@@ -1,16 +1,36 @@
-node_modules/
-dist/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
 .venv/
 venv/
-__pycache__/
-*.pyc
+env/
+
+# Environment variables
 .env
 .env.*
-!.env.example
 
-.nltk_data/
-cache_embeddings/
-
+# Vercel
 .vercel/
-.vercel
-.env*
+
+# uv
+.uv-cache/
+
+# Node
+node_modules/
+
+# Build
+dist/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

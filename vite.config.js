@@ -6,13 +6,13 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/api/summarize": {
-        target: "http://127.0.0.1:8001",
+      "/api/health": {
+        target: "http://127.0.0.1:8000",
         changeOrigin: true,
       },
 
-      "/api/health": {
-        target: "http://127.0.0.1:8000",
+      "/api/summarize": {
+        target: "http://127.0.0.1:8001",
         changeOrigin: true,
       },
 
