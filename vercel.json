@@ -5,12 +5,17 @@
     "env": {
       "UV_PYTHON": "3.12",
       "PYTHON_VERSION": "3.12",
-      "UV_TORCH_BACKEND": "cpu"
+      "UV_TORCH_BACKEND": "cpu",
+      "VERCEL_SUPPORT_LARGE_FUNCTIONS": "1"
     }
+  },
+  "env": {
+    "VERCEL_SUPPORT_LARGE_FUNCTIONS": "1"
   },
   "functions": {
     "api/index.py": {
-      "maxDuration": 300
+      "maxDuration": 300,
+      "excludeFiles": "{node_modules/**,dist/**,src/**,public/**,index.html,package-lock.json}"
     }
   }
 }
