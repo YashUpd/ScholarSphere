@@ -1,0 +1,11 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+app.py
+app_main.py
+.streamlit/
+cache_embeddings/
+testingFiles/
+commands_explanation.txt
