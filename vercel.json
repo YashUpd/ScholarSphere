@@ -1,6 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
+  "build": {
+    "env": {
+      "UV_PYTHON": "3.12",
+      "PYTHON_VERSION": "3.12",
+      "UV_TORCH_BACKEND": "cpu"
+    }
+  },
   "functions": {
     "api/index.py": {
       "maxDuration": 300
