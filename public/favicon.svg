@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="70%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+
+    <!-- Sphere Gradient -->
+    <radialGradient id="sphereGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#0284c7" />
+      <stop offset="70%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Ring Gradients -->
+    <linearGradient id="ringCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="1" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="ringPurple" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="1" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.3" />
+    </linearGradient>
+
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Dark Badge -->
+  <circle cx="256" cy="256" r="248" fill="url(#bgGrad)" stroke="#334155" stroke-width="6" />
+
+  <!-- Outer Orbital Ring Behind -->
+  <g filter="url(#neonGlow)">
+    <ellipse cx="256" cy="290" rx="200" ry="75" fill="none" stroke="url(#ringPurple)" stroke-width="6" transform="rotate(-18 256 290)" stroke-dasharray="320 20" />
+    <ellipse cx="256" cy="290" rx="195" ry="70" fill="none" stroke="url(#ringCyan)" stroke-width="7" transform="rotate(22 256 290)" stroke-dasharray="340 30" />
+  </g>
+
+  <!-- Central Glowing Sphere -->
+  <circle cx="256" cy="285" r="115" fill="url(#sphereGrad)" filter="url(#neonGlow)" />
+  
+  <!-- Sphere Highlight / Inner Glow -->
+  <ellipse cx="225" cy="235" rx="55" ry="35" fill="#bae6fd" fill-opacity="0.4" transform="rotate(-20 225 235)" filter="blur(6px)" />
+  <circle cx="256" cy="285" r="115" fill="none" stroke="#67e8f9" stroke-width="3" stroke-opacity="0.6" />
+
+  <!-- Orbital Particles -->
+  <circle cx="120" cy="235" r="7" fill="#67e8f9" filter="url(#neonGlow)" />
+  <circle cx="395" cy="335" r="6" fill="#c084fc" filter="url(#neonGlow)" />
+  <circle cx="360" cy="225" r="5" fill="#38bdf8" filter="url(#neonGlow)" />
+  <circle cx="150" cy="355" r="5" fill="#f472b6" filter="url(#neonGlow)" />
+
+  <!-- Graduation Cap (Mortarboard) -->
+  <g filter="url(#neonGlow)">
+    <!-- Cap Diamond Crown -->
+    <polygon points="256,110 395,160 256,208 117,160" fill="url(#capGrad)" stroke="#bae6fd" stroke-width="4" stroke-linejoin="round" />
+    
+    <!-- Cap Skull Skullcap / Base Band -->
+    <path d="M 180,186 Q 256,220 332,186 L 332,216 Q 256,252 180,216 Z" fill="#0284c7" stroke="#38bdf8" stroke-width="4" stroke-linejoin="round" />
+    
+    <!-- Cap Button & Tassel -->
+    <circle cx="256" cy="158" r="6" fill="#f8fafc" />
+    <path d="M 256,158 Q 365,170 365,225" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
+    <rect x="360" y="222" width="10" height="20" rx="3" fill="#67e8f9" />
+  </g>
+</svg>

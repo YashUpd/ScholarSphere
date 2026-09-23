@@ -17,5 +17,11 @@
       "maxDuration": 300,
       "excludeFiles": "{node_modules/**,dist/**,src/**,public/**,index.html,package-lock.json}"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
 }
