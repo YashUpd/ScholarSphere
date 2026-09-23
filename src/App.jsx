@@ -180,7 +180,13 @@ function App() {
 
       <header className="header">
         <div className="brand">
-          <div className="brand-icon">🎓</div>
+          <div className="brand-icon">
+            <img
+              src="/logo.svg"
+              alt="ScholarSphere Logo"
+              className="brand-logo-img"
+            />
+          </div>
 
           <div>
             <h1>ScholarSphere</h1>
@@ -199,7 +205,7 @@ function App() {
         {/* HERO */}
 
         <section className="hero">
-          <div>
+          <div className="hero-content">
             <p className="eyebrow">ACADEMIC AI PLATFORM</p>
 
             <h2>
@@ -213,6 +219,15 @@ function App() {
               create quizzes, and discover related research using AI-powered
               NLP.
             </p>
+          </div>
+
+          <div className="hero-visual">
+            <div className="hero-sphere-glow"></div>
+            <img
+              src="/logo.svg"
+              alt="ScholarSphere AI Emblem"
+              className="hero-logo-large"
+            />
           </div>
         </section>
 
@@ -288,7 +303,14 @@ function App() {
       ===================================================== */}
 
       <footer>
-        <p>ScholarSphere • AI-powered research analysis</p>
+        <div className="footer-brand">
+          <img
+            src="/logo.svg"
+            alt="ScholarSphere"
+            className="footer-logo-img"
+          />
+          <p>ScholarSphere • AI-powered research analysis</p>
+        </div>
 
         <a
           href="https://github.com/YashUpd/ScholarSphere"
